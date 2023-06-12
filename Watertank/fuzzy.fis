@@ -1,0 +1,33 @@
+[System]
+Name='fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='hd'
+Range=[-1 1]
+NumMFs=3
+MF1='low':'trimf',[-1.833 -1 -0.1667]
+MF2='suit':'trimf',[-0.8333 0 0.8333]
+MF3='high':'trimf',[0.1667 1 1.833]
+
+[Output1]
+Name='out'
+Range=[-300 300]
+NumMFs=3
+MF1='down':'zmf',[-275 -75]
+MF2='z':'gaussmf',[67 6]
+MF3='up':'smf',[75 275]
+
+[Rules]
+1, 3 (1) : 1
+2, 2 (1) : 1
+3, 1 (1) : 1

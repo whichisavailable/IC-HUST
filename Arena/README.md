@@ -5,7 +5,7 @@ Arena Challenge是一个由Matlab代码编写的仿真环境。主要要求挑�
 
 **主要改动**
 
-Aplus.m为我们的寻路算法，控制和一些寻路的小细节在Policy.m中实现，可修改sys.ini改变环境参数。
+Aplus.m为我们的寻路算法，控制和一些寻路的小细节在Policy.m中实现。可修改sys.ini改变环境参数，运行main.m即可执行。
 
 
 
